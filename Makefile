@@ -26,7 +26,8 @@ TAG        = latest
 # Makefile.docker overwrites
 # NAME    = no default
 # VERSION = no default
-IMAGE    = devilbox/mysql
+ORG_USER = devilboxcommunity
+IMAGE    = $(ORG_USER)/mysql
 DIR      = Dockerfiles
 FILE     = $(NAME)-$(VERSION)
 TAG      = latest
@@ -62,9 +63,11 @@ help:
 # Build Targets
 # -------------------------------------------------------------------------------------------------
 .PHONY: build
+build: ARGS+=--build-arg ARCH=$(shell if [ "$(ARCH)" = "linux/amd64" ]; then echo "x86_64"; else echo "aarch64"; fi)
 build: docker-arch-build
 
 .PHONY: rebuild
+build: ARGS+=--build-arg ARCH=$(shell if [ "$(ARCH)" = "linux/amd64" ]; then echo "x86_64"; else echo "aarch64"; fi)
 rebuild: docker-arch-rebuild
 
 .PHONY: push
