@@ -138,44 +138,45 @@ The below listed tables show how the official images have been retagged.
 * [DockerHub](https://hub.docker.com/_/mysql)
 * [GitHub](https://github.com/docker-library/mysql)
 
-| Original Image and Tag | New Image and Tag              | Available platforms |
-|------------------------|--------------------------------|---------------------|
-| `mysql:5.5`            | `devilbox/mysql:mysql-5.5`     | `amd64`             |
-| `mysql:5.6`            | `devilbox/mysql:mysql-5.6`     | `amd64`             |
-| `mysql:5.7`            | `devilbox/mysql:mysql-5.7`     | `amd64`             |
-| `mysql:8.0`            | `devilbox/mysql:mysql-8.0`     | `amd64`, `arm64`    |
+| Original Image and Tag | New Image and Tag                       | Available platforms |
+|------------------------|-----------------------------------------|---------------------|
+| `mysql:5.5`            | `devilboxcommunity/mysql:mysql-5.5`     | `amd64`             |
+| `mysql:5.6`            | `devilboxcommunity/mysql:mysql-5.6`     | `amd64`             |
+| `mysql:5.7`            | `devilboxcommunity/mysql:mysql-5.7`     | `amd64`             |
+| `mysql:8.0`            | `devilboxcommunity/mysql:mysql-8.0`     | `amd64`, `arm64`    |
 
 #### MariaDB
 
 * [DockerHub](https://hub.docker.com/_/mariadb)
 * [GitHub](https://github.com/docker-library/mariadb)
 
-| Original Image and Tag | New Image and Tag              | Available platforms |
-|------------------------|--------------------------------|---------------------|
-| `mariadb:5.5`          | `devilbox/mysql:mariadb-5.5`   | `amd64`             |
-| `mariadb:10.0`         | `devilbox/mysql:mariadb-10.0`  | `amd64`             |
-| `mariadb:10.1`         | `devilbox/mysql:mariadb-10.1`  | `amd64`, `arm64`    |
-| `mariadb:10.2`         | `devilbox/mysql:mariadb-10.2`  | `amd64`, `arm64`    |
-| `mariadb:10.3`         | `devilbox/mysql:mariadb-10.3`  | `amd64`, `arm64`    |
-| `mariadb:10.4`         | `devilbox/mysql:mariadb-10.4`  | `amd64`, `arm64`    |
-| `mariadb:10.5`         | `devilbox/mysql:mariadb-10.5`  | `amd64`, `arm64`    |
-| `mariadb:10.6`         | `devilbox/mysql:mariadb-10.6`  | `amd64`, `arm64`    |
-| `mariadb:10.7`         | `devilbox/mysql:mariadb-10.7`  | `amd64`, `arm64`    |
-| `mariadb:10.8`         | `devilbox/mysql:mariadb-10.8`  | `amd64`, `arm64`    |
-| `mariadb:10.9`         | `devilbox/mysql:mariadb-10.9`  | `amd64`, `arm64`    |
-| `mariadb:10.10`        | `devilbox/mysql:mariadb-10.10` | `amd64`, `arm64`    |
+| Original Image and Tag | New Image and Tag                       | Available platforms |
+|------------------------|-----------------------------------------|---------------------|
+| `mariadb:5.5`          | `devilboxcommunity/mysql:mariadb-5.5`   | `amd64`             |
+| `mariadb:10.0`         | `devilboxcommunity/mysql:mariadb-10.0`  | `amd64`             |
+| `mariadb:10.1`         | `devilboxcommunity/mysql:mariadb-10.1`  | `amd64`, `arm64`    |
+| `mariadb:10.2`         | `devilboxcommunity/mysql:mariadb-10.2`  | `amd64`, `arm64`    |
+| `mariadb:10.3`         | `devilboxcommunity/mysql:mariadb-10.3`  | `amd64`, `arm64`    |
+| `mariadb:10.4`         | `devilboxcommunity/mysql:mariadb-10.4`  | `amd64`, `arm64`    |
+| `mariadb:10.5`         | `devilboxcommunity/mysql:mariadb-10.5`  | `amd64`, `arm64`    |
+| `mariadb:10.6`         | `devilboxcommunity/mysql:mariadb-10.6`  | `amd64`, `arm64`    |
+| `mariadb:10.7`         | `devilboxcommunity/mysql:mariadb-10.7`  | `amd64`, `arm64`    |
+| `mariadb:10.8`         | `devilboxcommunity/mysql:mariadb-10.8`  | `amd64`, `arm64`    |
+| `mariadb:10.9`         | `devilboxcommunity/mysql:mariadb-10.9`  | `amd64`, `arm64`    |
+| `mariadb:10.10`        | `devilboxcommunity/mysql:mariadb-10.10` | `amd64`, `arm64`    |
+| `mariadb:11.4`         | `devilboxcommunity/mysql:mariadb-11.4`  | `amd64`, `arm64`    |
 
 #### Percona
 
 * [DockerHub](https://hub.docker.com/_/percona)
 * [GitHub](https://github.com/docker-library/percona)
 
-| Original Image and Tag | New Image and Tag              | Available platforms |
-|------------------------|--------------------------------|---------------------|
-| `percona:5.5`          | `devilbox/mysql:percona-5.5`   | `amd64`             |
-| `percona:5.6`          | `devilbox/mysql:percona-5.6`   | `amd64`             |
-| `percona:5.7`          | `devilbox/mysql:percona-5.7`   | `amd64`             |
-| `percona:8.0`          | `devilbox/mysql:percona-8.0`   | `amd64`             |
+| Original Image and Tag | New Image and Tag                       | Available platforms |
+|------------------------|-----------------------------------------|---------------------|
+| `percona:5.5`          | `devilboxcommunity/mysql:percona-5.5`   | `amd64`             |
+| `percona:5.6`          | `devilboxcommunity/mysql:percona-5.6`   | `amd64`             |
+| `percona:5.7`          | `devilboxcommunity/mysql:percona-5.7`   | `amd64`             |
+| `percona:8.0`          | `devilboxcommunity/mysql:percona-8.0`   | `amd64`             |
 
 
 ## 🖤 Sister Projects
@@ -189,38 +190,38 @@ Show some love for the following sister projects.
   <th>🐋 DockerHub</th>
  </tr>
  <tr>
-  <td><a title="Devilbox" href="https://github.com/cytopia/devilbox" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/01/png/banner_256_trans.png" /></a></td>
-  <td><a href="https://github.com/cytopia/devilbox"><code>Devilbox</code></a></td>
+  <td><a title="Devilbox" href="https://github.com/devilbox-community/devilbox" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/01/png/banner_256_trans.png" /></a></td>
+  <td><a href="https://github.com/devilbox-community/devilboxx"><code>Devilbox</code></a></td>
   <td></td>
  </tr>
  <tr>
-  <td><a title="Docker PHP-FMP" href="https://github.com/devilbox/docker-php-fpm" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/02/png/banner_256_trans.png" /></a></td>
-  <td><a href="https://github.com/devilbox/docker-php-fpm"><code>docker-php-fpm</code></a></td>
-  <td><a href="https://hub.docker.com/r/devilbox/php-fpm"><code>devilbox/php-fpm</code></a></td>
+  <td><a title="Docker PHP-FPM" href="https://github.com/devilbox-community/docker-php-fpm" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/02/png/banner_256_trans.png" /></a></td>
+  <td><a href="https://github.com/devilbox-community/docker-php-fpm"><code>docker-php-fpm</code></a></td>
+  <td><a href="https://hub.docker.com/r/devilboxcommunity/php-fpm"><code>devilboxcommunity/php-fpm</code></a></td>
  </tr>
  <tr>
   <td><a title="Docker PHP-FMP-Community" href="https://github.com/devilbox/docker-php-fpm-community" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/03/png/banner_256_trans.png" /></a></td>
-  <td><a href="https://github.com/devilbox/docker-php-fpm-community"><code>docker-php-fpm-community</code></a></td>
-  <td><a href="https://hub.docker.com/r/devilbox/php-fpm-community"><code>devilbox/php-fpm-community</code></a></td>
+  <td><a href="https://github.com/devilbox-community/docker-php-fpm-community"><code>docker-php-fpm-community</code></a></td>
+  <td><a href="https://hub.docker.com/r/devilboxcommunity/php-fpm-community"><code>devilboxcommunity/php-fpm-community</code></a></td>
  </tr>
  <tr>
-  <td><a title="Docker MySQL" href="https://github.com/devilbox/docker-mysql" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/04/png/banner_256_trans.png" /></a></td>
-  <td><a href="https://github.com/devilbox/docker-mysql"><code>docker-mysql</code></a></td>
-  <td><a href="https://hub.docker.com/r/devilbox/mysql"><code>devilbox/mysql</code></a></td>
+  <td><a title="Docker MySQL" href="https://github.com/devilbox-community/docker-mysql" ><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/04/png/banner_256_trans.png" /></a></td>
+  <td><a href="https://github.com/devilbox-community/docker-mysql"><code>docker-mysql</code></a></td>
+  <td><a href="https://hub.docker.com/r/devilboxcommunity/mysql"><code>devilboxcommunity/mysql</code></a></td>
  </tr>
  <tr>
   <td><img width="256px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/05/png/banner_256_trans.png" /></td>
   <td>
-   <a href="https://github.com/devilbox/docker-apache-2.2"><code>docker-apache-2.2</code></a><br/>
-   <a href="https://github.com/devilbox/docker-apache-2.4"><code>docker-apache-2.4</code></a><br/>
-   <a href="https://github.com/devilbox/docker-nginx-stable"><code>docker-nginx-stable</code></a><br/>
-   <a href="https://github.com/devilbox/docker-nginx-mainline"><code>docker-nginx-mainline</code></a>
+   <a href="https://github.com//devilbox-community/docker-apache-2.2"><code>docker-apache-2.2</code></a><br/>
+   <a href="https://github.com//devilbox-community/docker-apache-2.4"><code>docker-apache-2.4</code></a><br/>
+   <a href="https://github.com//devilbox-community/docker-nginx-stable"><code>docker-nginx-stable</code></a><br/>
+   <a href="https://github.com//devilbox-community/docker-nginx-mainline"><code>docker-nginx-mainline</code></a>
   </td>
   <td>
-   <a href="https://hub.docker.com/r/devilbox/apache-2.2"><code>devilbox/apache-2.2</code></a><br/>
-   <a href="https://hub.docker.com/r/devilbox/apache-2.4"><code>devilbox/apache-2.4</code></a><br/>
-   <a href="https://hub.docker.com/r/devilbox/nginx-stable"><code>devilbox/nginx-stable</code></a><br/>
-   <a href="https://hub.docker.com/r/devilbox/nginx-mainline"><code>devilbox/nginx-mainline</code></a>
+   <a href="https://hub.docker.com/r/devilboxcommunity/apache-2.2"><code>devilboxcommunity/apache-2.2</code></a><br/>
+   <a href="https://hub.docker.com/r/devilboxcommunity/apache-2.4"><code>devilboxcommunity/apache-2.4</code></a><br/>
+   <a href="https://hub.docker.com/r/devilboxcommunity/nginx-stable"><code>devilboxcommunity/nginx-stable</code></a><br/>
+   <a href="https://hub.docker.com/r/devilboxcommunity/nginx-mainline"><code>devilboxcommunity/nginx-mainline</code></a>
   </td>
  </tr>
 </table>
@@ -267,22 +268,21 @@ In case you seek help, go and visit the community pages.
 
 ## 🧘 Maintainer
 
-**[@cytopia](https://github.com/cytopia)**
+**[@nntoan](https://github.com/nntoan)**
 
 I try to keep up with literally **over 100 projects** besides a full-time job.
 If my work is making your life easier, consider contributing. 🖤
 
-* [GitHub Sponsorship](https://github.com/sponsors/cytopia)
-* [Patreon](https://www.patreon.com/devilbox)
-* [Open Collective](https://opencollective.com/devilbox)
+* [GitHub Sponsorship](https://github.com/sponsors/nntoan)
+* [Patreon](https://www.patreon.com/nntoan)
+* [Open Collective](https://opencollective.com/nntoan)
 
 **Findme:**
-**🐱** [cytopia](https://github.com/cytopia) / [devilbox](https://github.com/devilbox) |
-**🐋** [cytopia](https://hub.docker.com/r/cytopia/) / [devilbox](https://hub.docker.com/r/devilbox/) |
-**🐦** [everythingcli](https://twitter.com/everythingcli) / [devilbox](https://twitter.com/devilbox) |
-**📖** [everythingcli.org](http://www.everythingcli.org/)
+**🐱** [nntoan](https://github.com/nntoan) / [devilboxcommunity](https://github.com/devilbox-community) |
+**🐋** [cytopia](https://hub.docker.com/r/cytopia/) / [devilbox](https://hub.docker.com/r/devilboxcommunity/) |
 
-**Contrib:** PyPI: [cytopia](https://pypi.org/user/cytopia/) **·**
+**Contrib:**
+PyPI: [cytopia](https://pypi.org/user/cytopia/) **·**
 Terraform: [cytopia](https://registry.terraform.io/namespaces/cytopia) **·**
 Ansible: [cytopia](https://galaxy.ansible.com/cytopia)
 
@@ -291,4 +291,5 @@ Ansible: [cytopia](https://galaxy.ansible.com/cytopia)
 
 **[MIT License](LICENSE)**
 
-Copyright (c) 2019 [cytopia](https://github.com/cytopia)
+Copyright (c) 2019-2023 [cytopia](https://github.com/cytopia)
+Copyright (c) 2024-present [nntoan](https://github.com/nntoan)
