@@ -3,7 +3,7 @@ set -e
 set -u
 set -o pipefail
 
-IMAGE="devilboxcommunity/mysql"
+IMAGE="${5}/mysql"
 #NAME="${1}"
 #VERSION="${2}"
 TAG="${3}"

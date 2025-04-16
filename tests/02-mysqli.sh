@@ -3,7 +3,7 @@ set -e
 set -u
 set -o pipefail
 
-IMAGE="devilboxcommunity/mysql"
+IMAGE="${5}/mysql"
 #NAME="${1}"
 #VERSION="${2}"
 TAG="${3}"
@@ -21,13 +21,13 @@ run "docker run -d --rm --platform ${ARCH} $(tty -s && echo "-it" || echo) --hos
 
 # Pull PHP image
 echo "2/5 Pulling PHP image "
-while ! run "docker pull --platform ${ARCH} php:7.2"; do
+while ! run "docker pull --platform ${ARCH} php:8.3"; do
 	sleep 1
 done
 
-# Start PHP 7.2
+# Start PHP 8.3
 echo "3/5 Starting PHP"
-run "docker run -d --rm --platform ${ARCH} $(tty -s && echo "-it" || echo) --hostname=php --name devilbox-test-php -v ${SCRIPTPATH}:/tmp --link devilbox-test-mysql php:7.2 sh -c 'sleep 9000'"
+run "docker run -d --rm --platform ${ARCH} $(tty -s && echo "-it" || echo) --hostname=php --name devilbox-test-php -v ${SCRIPTPATH}:/tmp --link devilbox-test-mysql php:8.3 sh -c 'sleep 9000'"
 
 # Install PHP mysqli module
 echo "4/5 Installing mysqli extension"

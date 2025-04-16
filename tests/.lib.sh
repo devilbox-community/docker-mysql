@@ -85,3 +85,11 @@ function run_fail() {
 		return 1
 	fi
 }
+
+###
+### Compare version
+###
+function ver() {
+  IFS='.' read -r major minor patch <<< "${1}"
+  printf "%02d%02d%02d" "$major" "$minor" "$patch"
+}
