@@ -1,10 +1,10 @@
 # MySQL Docker images
 
-[![Tag](https://img.shields.io/github/tag/devilbox/docker-mysql.svg)](https://github.com/devilbox/docker-mysql/releases)
-[![](https://img.shields.io/badge/github-devilbox%2Fdocker--mysql-red.svg)](https://github.com/devilbox/docker-mysql "github.com/devilbox/docker-mysql")
-[![lint](https://github.com/devilbox/docker-mysql/workflows/lint/badge.svg)](https://github.com/devilbox/docker-mysql/actions?query=workflow%3Alint)
-[![build](https://github.com/devilbox/docker-mysql/workflows/build/badge.svg)](https://github.com/devilbox/docker-mysql/actions?query=workflow%3Abuild)
-[![nightly](https://github.com/devilbox/docker-mysql/workflows/nightly/badge.svg)](https://github.com/devilbox/docker-mysql/actions?query=workflow%3Anightly)
+[![Tag](https://img.shields.io/github/tag/devilbox-community/docker-mysql.svg)](https://github.com/devilbox-community/docker-mysql/releases)
+[![](https://img.shields.io/badge/github-devilbox-community%2Fdocker--mysql-red.svg)](https://github.com/devilbox-community/docker-mysql "github.com/devilbox-community/docker-mysql")
+[![lint](https://github.com/devilbox-community/docker-mysql/workflows/lint/badge.svg)](https://github.com/devilbox-community/docker-mysql/actions?query=workflow%3Alint)
+[![build](https://github.com/devilbox-community/docker-mysql/workflows/build/badge.svg)](https://github.com/devilbox-community/docker-mysql/actions?query=workflow%3Abuild)
+[![nightly](https://github.com/devilbox-community/docker-mysql/workflows/nightly/badge.svg)](https://github.com/devilbox-community/docker-mysql/actions?query=workflow%3Anightly)
 [![License](https://img.shields.io/badge/license-MIT-%233DA639.svg)](https://opensource.org/licenses/MIT)
 
 [![Discord](https://img.shields.io/discord/1051541389256704091?color=8c9eff&label=Discord&logo=discord)](https://discord.gg/2wP3V6kBj4)
@@ -12,19 +12,19 @@
 
 **Available Architectures:**  `amd64`, `arm64`
 
-[![](https://img.shields.io/docker/pulls/devilbox/mysql.svg)](https://hub.docker.com/r/devilbox/mysql)
+[![](https://img.shields.io/docker/pulls/devilboxcommunity/mysql.svg)](https://hub.docker.com/r/devilboxcommunity/mysql)
 
 The purpose of this project is to streamline and re-tag the official Docker images for
 [MySQL](https://hub.docker.com/_/mysql), [MariaDB](https://hub.docker.com/_/mariadb) and
 [Percona](https://hub.docker.com/_/percona) in order to use them for the
-**[Devilbox](https://github.com/cytopia/devilbox)** project.
+**[Devilbox](https://github.com/devilbox-community/devilbox)** project.
 
-> ##### 🐱 GitHub: [devilbox/docker-mysql](https://github.com/devilbox/docker-mysql)
+> ##### 🐱 GitHub: [devilbox-community/docker-mysql](https://github.com/devilbox-community/docker-mysql)
 
 | Current Project  | Reference Implementation |
 |:----------------:|:------------------------:|
-| <a title="Docker MySQL" href="https://github.com/devilbox/docker-mysql" ><img height="82px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/04/png/banner_256_trans.png" /></a> | <a title="Devilbox" href="https://github.com/cytopia/devilbox" ><img height="82px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/01/png/banner_256_trans.png" /></a> |
-| Streamlined [MySQL](https://github.com/devilbox/docker-mysql) images | The [Devilbox](https://github.com/cytopia/devilbox) |
+| <a title="Docker MySQL" href="https://github.com/devilbox-community/docker-mysql" ><img height="82px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/04/png/banner_256_trans.png" /></a> | <a title="Devilbox" href="https://github.com/devilbox-community/devilbox" ><img height="82px" src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_banner/cytopia/01/png/banner_256_trans.png" /></a> |
+| Streamlined [MySQL](https://github.com/devilbox-community/docker-mysql) images | The [Devilbox](https://github.com/devilbox-community/devilbox) |
 
 
 
@@ -56,31 +56,32 @@ The purpose of this project is to streamline and re-tag the official Docker imag
 [`percona-8.0`][tag_percona-8.0]
 
 
-[tag_mysql-5.5]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mysql-5.5
-[tag_mysql-5.6]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mysql-5.6
-[tag_mysql-5.7]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mysql-5.7
-[tag_mysql-8.0]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mysql-8.0
+[tag_mysql-5.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-5.5
+[tag_mysql-5.6]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-5.6
+[tag_mysql-5.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-5.7
+[tag_mysql-8.0]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-8.0
 
-[tag_percona-5.5]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/percona-5.5
-[tag_percona-5.6]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/percona-5.6
-[tag_percona-5.7]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/percona-5.7
-[tag_percona-8.0]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/percona-8.0
+[tag_percona-5.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-5.5
+[tag_percona-5.6]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-5.6
+[tag_percona-5.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-5.7
+[tag_percona-8.0]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-8.0
 
-[tag_mariadb-5.5]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-5.5
-[tag_mariadb-10.0]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.0
-[tag_mariadb-10.1]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.1
-[tag_mariadb-10.2]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.2
-[tag_mariadb-10.3]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.3
-[tag_mariadb-10.4]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.4
-[tag_mariadb-10.5]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.5
-[tag_mariadb-10.6]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.6
-[tag_mariadb-10.7]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.7
-[tag_mariadb-10.8]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.8
-[tag_mariadb-10.9]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.9
-[tag_mariadb-10.10]: https://github.com/devilbox/docker-mysql/blob/master/Dockerfiles/mariadb-10.10
+[tag_mariadb-5.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-5.5
+[tag_mariadb-10.0]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.0
+[tag_mariadb-10.1]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.1
+[tag_mariadb-10.2]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.2
+[tag_mariadb-10.3]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.3
+[tag_mariadb-10.4]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.4
+[tag_mariadb-10.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.5
+[tag_mariadb-10.6]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.6
+[tag_mariadb-10.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.7
+[tag_mariadb-10.8]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.8
+[tag_mariadb-10.9]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.9
+[tag_mariadb-10.10]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.10
+[tag_mariadb-11.4]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-11.4
 
 ```bash
-docker pull devilbox/mysql:<docker-tag>
+docker pull devilboxcommunity/mysql:<docker-tag>
 ```
 
 
@@ -292,4 +293,5 @@ Ansible: [cytopia](https://galaxy.ansible.com/cytopia)
 **[MIT License](LICENSE)**
 
 Copyright (c) 2019-2023 [cytopia](https://github.com/cytopia)
+
 Copyright (c) 2024-present [nntoan](https://github.com/nntoan)
