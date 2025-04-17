@@ -1,2 +1,8 @@
+.idea
+.ansible/*.retry
+.DS_Store
+.vscode
+*.swp
+
 Makefile.docker
 Makefile.lint
