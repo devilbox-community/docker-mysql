@@ -16,6 +16,7 @@ CWD="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
 
 # Start MySQL
+wait_removed devilbox-test-mysql devilbox-test-php
 echo "1/5 Starting MySQL"
 run "docker run -d --rm --platform ${ARCH} $(tty -s && echo "-it" || echo) --hostname=mysql --name devilbox-test-mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes ${IMAGE}:${TAG}"
 

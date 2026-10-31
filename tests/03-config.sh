@@ -28,6 +28,7 @@ if [ "${NAME}" = "mariadb" ] && [ "$(ver "${VERSION}")" -ge "$(ver "11")" ]; the
 fi
 
 # Start MySQL
+wait_removed devilbox-test-mysql devilbox-test-php
 run "docker run -d --rm --platform ${ARCH} $(tty -s && echo "-it" || echo) --hostname=mysql --name devilbox-test-mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v ${CNF_DIR}:/etc/mysql/docker-default.d ${IMAGE}:${TAG}"
 
 # Test MySQL connectivity

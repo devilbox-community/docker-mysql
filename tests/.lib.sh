@@ -87,6 +87,25 @@ function run_fail() {
 }
 
 ###
+### Wait until containers are gone ('docker run --rm' removes them asynchronously),
+### so the next test can reuse their names. Force-remove leftovers after 30 seconds.
+###
+function wait_removed() {
+	local name
+	local i
+	for name in "${@}"; do
+		i=0
+		while docker inspect "${name}" >/dev/null 2>&1; do
+			i=$(( i + 1 ))
+			if [ "${i}" -ge "30" ]; then
+				docker rm -f "${name}" >/dev/null 2>&1 || true
+			fi
+			sleep 1
+		done
+	done
+}
+
+###
 ### Compare version
 ###
 function ver() {
