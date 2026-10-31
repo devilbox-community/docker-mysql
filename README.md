@@ -36,6 +36,8 @@ The purpose of this project is to streamline and re-tag the official Docker imag
 [`mysql-5.6`][tag_mysql-5.6]
 [`mysql-5.7`][tag_mysql-5.7]
 [`mysql-8.0`][tag_mysql-8.0]
+[`mysql-8.4`][tag_mysql-8.4]
+[`mysql-9.7`][tag_mysql-9.7]
 
 [`mariadb-5.5`][tag_mariadb-5.5]
 [`mariadb-10.0`][tag_mariadb-10.0]
@@ -49,22 +51,32 @@ The purpose of this project is to streamline and re-tag the official Docker imag
 [`mariadb-10.8`][tag_mariadb-10.8]
 [`mariadb-10.9`][tag_mariadb-10.9]
 [`mariadb-10.10`][tag_mariadb-10.10]
+[`mariadb-10.11`][tag_mariadb-10.11]
+[`mariadb-11.4`][tag_mariadb-11.4]
+[`mariadb-11.8`][tag_mariadb-11.8]
+[`mariadb-12.3`][tag_mariadb-12.3]
 
 [`percona-5.5`][tag_percona-5.5]
 [`percona-5.6`][tag_percona-5.6]
 [`percona-5.7`][tag_percona-5.7]
 [`percona-8.0`][tag_percona-8.0]
+[`percona-8.4`][tag_percona-8.4]
+[`percona-9.7`][tag_percona-9.7]
 
 
 [tag_mysql-5.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-5.5
 [tag_mysql-5.6]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-5.6
 [tag_mysql-5.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-5.7
 [tag_mysql-8.0]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-8.0
+[tag_mysql-8.4]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-8.4
+[tag_mysql-9.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mysql-9.7
 
 [tag_percona-5.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-5.5
 [tag_percona-5.6]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-5.6
 [tag_percona-5.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-5.7
 [tag_percona-8.0]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-8.0
+[tag_percona-8.4]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-8.4
+[tag_percona-9.7]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/percona-9.7
 
 [tag_mariadb-5.5]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-5.5
 [tag_mariadb-10.0]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.0
@@ -78,7 +90,10 @@ The purpose of this project is to streamline and re-tag the official Docker imag
 [tag_mariadb-10.8]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.8
 [tag_mariadb-10.9]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.9
 [tag_mariadb-10.10]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.10
+[tag_mariadb-10.11]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-10.11
 [tag_mariadb-11.4]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-11.4
+[tag_mariadb-11.8]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-11.8
+[tag_mariadb-12.3]: https://github.com/devilbox-community/docker-mysql/blob/master/Dockerfiles/mariadb-12.3
 
 ```bash
 docker pull devilboxcommunity/mysql:<docker-tag>
@@ -91,7 +106,9 @@ The provided images are purely based on their official counterparts, however the
 slightly customized/enhanced additions added:
 
 * An additional \*.cnf config directory is provided: `/etc/mysql/docker-default.d/`. This is necessary as the default config directory already contains \*.cnf files and you might want to keep them and still be able to additionally provide custom files
-* MySQL 8.0 and Percona 8.0 by default use a new authentication mechanism which is not (yet) understood by PHP's `mysqli` extension. For those two images, the old authentication mechanism **[`mysql_native_password`](https://dev.mysql.com/doc/refman/8.0/en/native-pluggable-authentication.html)**  has been re-enabled, so you can still use it with your current PHP code.
+* Percona images also read `/etc/mysql/conf.d/` (the Percona base images only read `/etc/my.cnf.d/`), so the primary config mountpoint works for all images.
+* MySQL 8.0/8.4 and Percona 8.0/8.4 by default use a new authentication mechanism (`caching_sha2_password`) which PHP's `mysqli` extension only fully supports since PHP 7.4.4. For these images, the old authentication mechanism **[`mysql_native_password`](https://dev.mysql.com/doc/refman/8.4/en/native-pluggable-authentication.html)** has been re-enabled and made the default, so you can still use it with older PHP versions.
+* MySQL 9.x and Percona 9.x no longer ship `mysql_native_password`. They only work with PHP 7.4.4 or newer.
 
 
 ## ∑ Environment Variables
@@ -100,7 +117,7 @@ Same as official Docker images:
 
 * [MySQL](https://hub.docker.com/_/mysql)
 * [MariaDB](https://hub.docker.com/_/mariadb)
-* [Percona](https://hub.docker.com/_/percona)
+* [Percona](https://hub.docker.com/_/percona) (up to 8.0), [Percona Server](https://hub.docker.com/r/percona/percona-server) (8.4 and newer)
 
 
 ## 🖧 Exposed Ports
@@ -145,6 +162,8 @@ The below listed tables show how the official images have been retagged.
 | `mysql:5.6`            | `devilboxcommunity/mysql:mysql-5.6`     | `amd64`             |
 | `mysql:5.7`            | `devilboxcommunity/mysql:mysql-5.7`     | `amd64`             |
 | `mysql:8.0`            | `devilboxcommunity/mysql:mysql-8.0`     | `amd64`, `arm64`    |
+| `mysql:8.4`            | `devilboxcommunity/mysql:mysql-8.4`     | `amd64`, `arm64`    |
+| `mysql:9.7`            | `devilboxcommunity/mysql:mysql-9.7`     | `amd64`, `arm64`    |
 
 #### MariaDB
 
@@ -165,12 +184,15 @@ The below listed tables show how the official images have been retagged.
 | `mariadb:10.8`         | `devilboxcommunity/mysql:mariadb-10.8`  | `amd64`, `arm64`    |
 | `mariadb:10.9`         | `devilboxcommunity/mysql:mariadb-10.9`  | `amd64`, `arm64`    |
 | `mariadb:10.10`        | `devilboxcommunity/mysql:mariadb-10.10` | `amd64`, `arm64`    |
+| `mariadb:10.11`        | `devilboxcommunity/mysql:mariadb-10.11` | `amd64`, `arm64`    |
 | `mariadb:11.4`         | `devilboxcommunity/mysql:mariadb-11.4`  | `amd64`, `arm64`    |
+| `mariadb:11.8`         | `devilboxcommunity/mysql:mariadb-11.8`  | `amd64`, `arm64`    |
+| `mariadb:12.3`         | `devilboxcommunity/mysql:mariadb-12.3`  | `amd64`, `arm64`    |
 
 #### Percona
 
-* [DockerHub](https://hub.docker.com/_/percona)
-* [GitHub](https://github.com/docker-library/percona)
+* [DockerHub](https://hub.docker.com/_/percona), [GitHub](https://github.com/docker-library/percona) (up to 8.0)
+* [DockerHub](https://hub.docker.com/r/percona/percona-server), [GitHub](https://github.com/percona/percona-docker) (8.4 and newer)
 
 | Original Image and Tag | New Image and Tag                       | Available platforms |
 |------------------------|-----------------------------------------|---------------------|
@@ -178,6 +200,8 @@ The below listed tables show how the official images have been retagged.
 | `percona:5.6`          | `devilboxcommunity/mysql:percona-5.6`   | `amd64`             |
 | `percona:5.7`          | `devilboxcommunity/mysql:percona-5.7`   | `amd64`             |
 | `percona:8.0`          | `devilboxcommunity/mysql:percona-8.0`   | `amd64`             |
+| `percona/percona-server:8.4` | `devilboxcommunity/mysql:percona-8.4` | `amd64`, `arm64` |
+| `percona/percona-server:9.7` | `devilboxcommunity/mysql:percona-9.7` | `amd64`, `arm64` |
 
 
 ## 🖤 Sister Projects
