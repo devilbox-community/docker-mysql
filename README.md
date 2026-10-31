@@ -106,8 +106,9 @@ The provided images are purely based on their official counterparts, however the
 slightly customized/enhanced additions added:
 
 * An additional \*.cnf config directory is provided: `/etc/mysql/docker-default.d/`. This is necessary as the default config directory already contains \*.cnf files and you might want to keep them and still be able to additionally provide custom files
-* MySQL 8.0/8.4 and Percona 8.0/8.4 by default use a new authentication mechanism (`caching_sha2_password`) which PHP's `mysqli` extension only understands since PHP 7.4. For these images, the old authentication mechanism **[`mysql_native_password`](https://dev.mysql.com/doc/refman/8.4/en/native-pluggable-authentication.html)** has been re-enabled and made the default, so you can still use it with older PHP versions.
-* MySQL 9.x and Percona 9.x no longer ship `mysql_native_password`. They only work with PHP 7.4 or newer.
+* Percona images also read `/etc/mysql/conf.d/` (the Percona base images only read `/etc/my.cnf.d/`), so the primary config mountpoint works for all images.
+* MySQL 8.0/8.4 and Percona 8.0/8.4 by default use a new authentication mechanism (`caching_sha2_password`) which PHP's `mysqli` extension only fully supports since PHP 7.4.4. For these images, the old authentication mechanism **[`mysql_native_password`](https://dev.mysql.com/doc/refman/8.4/en/native-pluggable-authentication.html)** has been re-enabled and made the default, so you can still use it with older PHP versions.
+* MySQL 9.x and Percona 9.x no longer ship `mysql_native_password`. They only work with PHP 7.4.4 or newer.
 
 
 ## ∑ Environment Variables
@@ -116,7 +117,7 @@ Same as official Docker images:
 
 * [MySQL](https://hub.docker.com/_/mysql)
 * [MariaDB](https://hub.docker.com/_/mariadb)
-* [Percona](https://hub.docker.com/_/percona)
+* [Percona](https://hub.docker.com/_/percona) (up to 8.0), [Percona Server](https://hub.docker.com/r/percona/percona-server) (8.4 and newer)
 
 
 ## 🖧 Exposed Ports
@@ -190,8 +191,8 @@ The below listed tables show how the official images have been retagged.
 
 #### Percona
 
-* [DockerHub](https://hub.docker.com/_/percona)
-* [GitHub](https://github.com/docker-library/percona)
+* [DockerHub](https://hub.docker.com/_/percona), [GitHub](https://github.com/docker-library/percona) (up to 8.0)
+* [DockerHub](https://hub.docker.com/r/percona/percona-server), [GitHub](https://github.com/percona/percona-docker) (8.4 and newer)
 
 | Original Image and Tag | New Image and Tag                       | Available platforms |
 |------------------------|-----------------------------------------|---------------------|

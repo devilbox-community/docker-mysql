@@ -88,15 +88,19 @@ function run_fail() {
 
 ###
 ### Wait until containers are gone ('docker run --rm' removes them asynchronously),
-### so the next test can reuse their names. Force-remove leftovers after 30 seconds.
+### so the next test can reuse their names. Force-remove leftovers after 30 seconds, give up after 60.
 ###
 function wait_removed() {
 	local name
 	local i
 	for name in "${@}"; do
 		i=0
-		while docker inspect "${name}" >/dev/null 2>&1; do
+		while docker container inspect "${name}" >/dev/null 2>&1; do
 			i=$(( i + 1 ))
+			if [ "${i}" -ge "60" ]; then
+				>&2 echo "[ERROR] Container ${name} is still present"
+				return 1
+			fi
 			if [ "${i}" -ge "30" ]; then
 				docker rm -f "${name}" >/dev/null 2>&1 || true
 			fi

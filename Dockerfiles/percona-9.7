@@ -3,8 +3,9 @@ FROM percona/percona-server:9.7
 
 USER root
 RUN set -eux \
-    && mkdir -p /etc/mysql/docker-default.d/ \
+    && mkdir -p /etc/mysql/conf.d/ /etc/mysql/docker-default.d/ \
     && if [ -f /etc/my.cnf ]; then \
+        echo '!'"includedir /etc/mysql/conf.d/" >> /etc/my.cnf; \
         echo '!'"includedir /etc/mysql/docker-default.d/" >> /etc/my.cnf; \
     elif [ -f /etc/mysql/my.cnf ]; then \
         echo '!'"includedir /etc/mysql/docker-default.d/" >> /etc/mysql/my.cnf; \
